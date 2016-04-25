@@ -95,7 +95,7 @@ self.view.removeKeyboardControl()
 
 ## Author
 
-cztatsumi-keisuke, tatsumi-keisuke@cyber-z.co.jp
+cztatsumi-keisuke, nietzsche.god.is.dead@gmail.com
 
 ## License
 
