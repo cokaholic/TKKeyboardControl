@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TKKeyboardControl_Example', :exclusive => true do
+  pod 'TKKeyboardControl', :path => '../'
+end
+
+target 'TKKeyboardControl_Tests', :exclusive => true do
+  pod 'TKKeyboardControl', :path => '../'
+
+  
+end
