@@ -1,0 +1,6 @@
+framework module TKKeyboardControl {
+  umbrella header "TKKeyboardControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

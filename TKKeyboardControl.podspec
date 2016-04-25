@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "TKKeyboardControl"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "TKKeyboardControl adds keyboard awareness and scrolling dismissal (a.k.a. iMessages app) to any view with only 1 line of code for Swift."
 
   s.homepage         = "https://github.com/cztatsumi-keisuke"

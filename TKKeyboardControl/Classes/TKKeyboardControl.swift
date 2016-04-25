@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-typealias TKKeyboardDidMoveBlock = ((keyboardFrameInView : CGRect, opening : Bool, closing : Bool) -> Void)?
+public typealias TKKeyboardDidMoveBlock = ((keyboardFrameInView : CGRect, opening : Bool, closing : Bool) -> Void)?
 
 class TKKeyboardDidMoveBlockWrapper {
     var closure: TKKeyboardDidMoveBlock
@@ -32,22 +32,9 @@ class PreviousKeyboardRectWrapper {
     return UIViewAnimationOptions.init(rawValue: UInt(curve.rawValue))
 }
 
-extension UIView : UIGestureRecognizerDelegate {
-
-    private struct AssociatedKeys {
-        static var DescriptiveTriggerOffset = "DescriptiveTriggerOffset"
-        
-        static var UIViewKeyboardTriggerOffset = "UIViewKeyboardTriggerOffset";
-        static var UIViewKeyboardDidMoveFrameBasedBlock = "UIViewKeyboardDidMoveFrameBasedBlock";
-        static var UIViewKeyboardDidMoveConstraintBasedBlock = "UIViewKeyboardDidMoveConstraintBasedBlock";
-        static var UIViewKeyboardActiveInput = "UIViewKeyboardActiveInput";
-        static var UIViewKeyboardActiveView = "UIViewKeyboardActiveView";
-        static var UIViewKeyboardPanRecognizer = "UIViewKeyboardPanRecognizer";
-        static var UIViewPreviousKeyboardRect = "UIViewPreviousKeyboardRect";
-        static var UIViewIsPanning = "UIViewIsPanning";
-        static var UIViewKeyboardOpened = "UIViewKeyboardOpened";
-        static var UIViewKeyboardFrameObserved = "UIViewKeyboardFrameObserved";
-    }
+public extension UIView {
+    
+// MARK: - Public Properties
     
     dynamic var keyboardTriggerOffset : CGFloat {
         
@@ -81,6 +68,91 @@ extension UIView : UIGestureRecognizerDelegate {
             
             return touchLocationInKeyboardWindow.y >= thresholdHeight && velocity.y >= 0
         }
+    }
+    
+// MARK: - Public Methods
+    
+    func isKeyboardOpened() -> Bool {
+        guard let isKeyboardOpened: Bool = self.keyboardOpened else {
+            return false
+        }
+        return isKeyboardOpened
+    }
+    
+    func addKeyboardPanningWithFrameBasedActionHandler(frameBasedActionHandler: TKKeyboardDidMoveBlock, constraintBasedActionHandler: TKKeyboardDidMoveBlock) {
+        
+        self.addKeyboardControl(true, frameBasedActionHandler: frameBasedActionHandler, constraintBasedActionHandler: constraintBasedActionHandler)
+    }
+    
+    func addKeyboardNonpanningWithFrameBasedActionHandler(frameBasedActionHandler: TKKeyboardDidMoveBlock, constraintBasedActionHandler: TKKeyboardDidMoveBlock) {
+        
+        self.addKeyboardControl(false, frameBasedActionHandler: frameBasedActionHandler, constraintBasedActionHandler: constraintBasedActionHandler)
+    }
+    
+    func keyboardFrameInView() -> CGRect {
+        
+        if self.keyboardActiveView != nil {
+            
+            let keyboardFrameInView = self.convertRect(self.keyboardActiveView!.frame, fromView: self.keyboardActiveView?.superview)
+            return keyboardFrameInView
+        }
+        else {
+            let keyboardFrameInView = CGRectMake(0, UIScreen.mainScreen().bounds.size.height, 0, 0)
+            return keyboardFrameInView
+        }
+    }
+    
+    func removeKeyboardControl() {
+        
+        // Unregister for text input notifications
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextFieldTextDidBeginEditingNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextViewTextDidBeginEditingNotification, object: nil)
+        
+        // Unregister for keyboard notifications
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidShowNotification, object: nil)
+        
+        // For the sake of 4.X compatibility
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "UIKeyboardWillChangeFrameNotification", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "UIKeyboardDidChangeFrameNotification", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidHideNotification, object: nil)
+        
+        // Unregister any gesture recognizer
+        self.removeGestureRecognizer(self.keyboardPanRecognizer!)
+        
+        // Release a few properties
+        self.frameBasedKeyboardDidMoveBlock = nil;
+        self.keyboardActiveInput = nil;
+        self.keyboardActiveView = nil;
+        self.keyboardPanRecognizer = nil;
+    }
+    
+    func hideKeyboard() {
+        
+        if self.keyboardActiveView != nil {
+            self.keyboardActiveView!.hidden = true
+            self.keyboardActiveView!.userInteractionEnabled = false
+            self.keyboardActiveInput!.resignFirstResponder()
+        }
+    }
+}
+
+extension UIView : UIGestureRecognizerDelegate {
+    
+    private struct AssociatedKeys {
+        static var DescriptiveTriggerOffset = "DescriptiveTriggerOffset"
+        
+        static var UIViewKeyboardTriggerOffset = "UIViewKeyboardTriggerOffset";
+        static var UIViewKeyboardDidMoveFrameBasedBlock = "UIViewKeyboardDidMoveFrameBasedBlock";
+        static var UIViewKeyboardDidMoveConstraintBasedBlock = "UIViewKeyboardDidMoveConstraintBasedBlock";
+        static var UIViewKeyboardActiveInput = "UIViewKeyboardActiveInput";
+        static var UIViewKeyboardActiveView = "UIViewKeyboardActiveView";
+        static var UIViewKeyboardPanRecognizer = "UIViewKeyboardPanRecognizer";
+        static var UIViewPreviousKeyboardRect = "UIViewPreviousKeyboardRect";
+        static var UIViewIsPanning = "UIViewIsPanning";
+        static var UIViewKeyboardOpened = "UIViewKeyboardOpened";
+        static var UIViewKeyboardFrameObserved = "UIViewKeyboardFrameObserved";
     }
     
     private var frameBasedKeyboardDidMoveBlock : TKKeyboardDidMoveBlock {
@@ -284,19 +356,9 @@ extension UIView : UIGestureRecognizerDelegate {
         }
     }
     
-// MARK: - Public Methods
+    // MARK: Add Keyboard Control
     
-    func addKeyboardPanningWithFrameBasedActionHandler(frameBasedActionHandler: TKKeyboardDidMoveBlock, constraintBasedActionHandler: TKKeyboardDidMoveBlock) {
-        
-        self.addKeyboardControl(true, frameBasedActionHandler: frameBasedActionHandler, constraintBasedActionHandler: constraintBasedActionHandler)
-    }
-    
-    func addKeyboardNonpanningWithFrameBasedActionHandler(frameBasedActionHandler: TKKeyboardDidMoveBlock, constraintBasedActionHandler: TKKeyboardDidMoveBlock) {
-        
-        self.addKeyboardControl(false, frameBasedActionHandler: frameBasedActionHandler, constraintBasedActionHandler: constraintBasedActionHandler)
-    }
-    
-    func addKeyboardControl(panning: Bool, frameBasedActionHandler: TKKeyboardDidMoveBlock, constraintBasedActionHandler: TKKeyboardDidMoveBlock) {
+    private func addKeyboardControl(panning: Bool, frameBasedActionHandler: TKKeyboardDidMoveBlock, constraintBasedActionHandler: TKKeyboardDidMoveBlock) {
         
         if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0 {
             if panning && self.respondsToSelector(Selector("keyboardDismissMode")) {
@@ -331,55 +393,7 @@ extension UIView : UIGestureRecognizerDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(UIView.inputKeyboardDidHide), name: UIKeyboardDidHideNotification, object: nil)
     }
     
-    func keyboardFrameInView() -> CGRect {
-        
-        if self.keyboardActiveView != nil {
-            
-            let keyboardFrameInView = self.convertRect(self.keyboardActiveView!.frame, fromView: self.keyboardActiveView?.superview)
-            return keyboardFrameInView
-        }
-        else {
-            let keyboardFrameInView = CGRectMake(0, UIScreen.mainScreen().bounds.size.height, 0, 0)
-            return keyboardFrameInView
-        }
-    }
-    
-    func removeKeyboardControl() {
-        
-        // Unregister for text input notifications
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextFieldTextDidBeginEditingNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextViewTextDidBeginEditingNotification, object: nil)
-        
-        // Unregister for keyboard notifications
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidShowNotification, object: nil)
-        
-        // For the sake of 4.X compatibility
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "UIKeyboardWillChangeFrameNotification", object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "UIKeyboardDidChangeFrameNotification", object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidHideNotification, object: nil)
-        
-        // Unregister any gesture recognizer
-        self.removeGestureRecognizer(self.keyboardPanRecognizer!)
-        
-        // Release a few properties
-        self.frameBasedKeyboardDidMoveBlock = nil;
-        self.keyboardActiveInput = nil;
-        self.keyboardActiveView = nil;
-        self.keyboardPanRecognizer = nil;
-    }
-    
-    func hideKeyboard() {
-        
-        if self.keyboardActiveView != nil {
-            self.keyboardActiveView!.hidden = true
-            self.keyboardActiveView!.userInteractionEnabled = false
-            self.keyboardActiveInput!.resignFirstResponder()
-        }
-    }
-    
-// MARK: - Input Notifications
+    // MARK: - Input Notifications
     
     func responderDidBecomeActive(notification: NSNotification) {
         
@@ -397,7 +411,7 @@ extension UIView : UIGestureRecognizerDelegate {
         }
     }
     
-// MARK: - Keyboard Notifications
+    // MARK: - Keyboard Notifications
     
     func inputKeyboardWillShow(notification: NSNotification) {
         
@@ -461,7 +475,7 @@ extension UIView : UIGestureRecognizerDelegate {
             self.keyboardFrameObserved = true
         }
     }
-
+    
     func inputKeyboardWillChangeFrame(notification: NSNotification) {
         
         var keyboardEndFrameWindow: CGRect = CGRect()
@@ -493,7 +507,7 @@ extension UIView : UIGestureRecognizerDelegate {
                                     if self.frameBasedKeyboardDidMoveBlock != nil && !CGRectIsNull(keyboardEndFrameView) {
                                         self.frameBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
                                     }
-        }, completion:nil)
+            }, completion:nil)
     }
     
     func inputKeyboardDidChangeFrame() {
@@ -578,7 +592,7 @@ extension UIView : UIGestureRecognizerDelegate {
         }
     }
     
-// MARK: - Touches Management
+    // MARK: - Touches Management
     
     public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         
@@ -648,7 +662,7 @@ extension UIView : UIGestureRecognizerDelegate {
                 UIView.animateWithDuration(0,
                                            delay: 0,
                                            options: [.TransitionNone, .BeginFromCurrentState],
-                                           animations: { 
+                                           animations: {
                                             
                                             self.keyboardActiveView?.frame = newKeyboardViewFrame!
                     }, completion: nil)
@@ -675,7 +689,7 @@ extension UIView : UIGestureRecognizerDelegate {
             UIView.animateWithDuration(0.25,
                                        delay: 0,
                                        options: [.CurveEaseOut, .BeginFromCurrentState],
-                                       animations: { 
+                                       animations: {
                                         self.keyboardActiveView?.frame = newKeyboardViewFrame!
                 }, completion: { (finished: Bool) in
                     
@@ -693,7 +707,7 @@ extension UIView : UIGestureRecognizerDelegate {
         }
     }
     
-// MARK: - Internal Methods
+    // MARK: - Internal Methods
     
     func recursiveFindFirstResponder(view: UIView) -> UIView? {
         

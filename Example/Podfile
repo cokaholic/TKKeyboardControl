@@ -1,11 +1,10 @@
+platform :ios, '8.0'
 use_frameworks!
 
-target 'TKKeyboardControl_Example', :exclusive => true do
-  pod 'TKKeyboardControl', :path => '../'
+target 'TKKeyboardControl_Example' do
+  pod 'TKKeyboardControl', :path => '..'
 end
 
-target 'TKKeyboardControl_Tests', :exclusive => true do
-  pod 'TKKeyboardControl', :path => '../'
-
-  
+target 'TKKeyboardControl_Tests' do
+  pod 'TKKeyboardControl', :path => '..'
 end

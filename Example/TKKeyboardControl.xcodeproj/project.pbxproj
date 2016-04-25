@@ -12,7 +12,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		FF21EF241CCDC8D700EA296F /* TKKeyboardControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF21EF231CCDC8D700EA296F /* TKKeyboardControl.swift */; };
+		92775110391DCEBF63ADD050 /* Pods_TKKeyboardControl_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C41D76A164778FF43B1B21B /* Pods_TKKeyboardControl_Tests.framework */; };
+		CE80AC634F28FE81E60E82DD /* Pods_TKKeyboardControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F070B7207E74C4BA2C2C87F /* Pods_TKKeyboardControl_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +36,15 @@
 		607FACE51AFB9204008FA782 /* TKKeyboardControl_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKKeyboardControl_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		62FCABB88E0CDDC2BF5189A0 /* Pods-TKKeyboardControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKKeyboardControl_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8C41D76A164778FF43B1B21B /* Pods_TKKeyboardControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKKeyboardControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F070B7207E74C4BA2C2C87F /* Pods_TKKeyboardControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKKeyboardControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A988FE9E744EED4C61D86F5A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		ABCF38A7EB3BD499C11072EE /* Pods-TKKeyboardControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKKeyboardControl_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B7EB3418B0236AEBB491AFD1 /* Pods-TKKeyboardControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKKeyboardControl_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C569ACEC91ADE6AF17846B27 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDCECB28C24B0FDBB316F142 /* TKKeyboardControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TKKeyboardControl.podspec; path = ../TKKeyboardControl.podspec; sourceTree = "<group>"; };
-		FF21EF231CCDC8D700EA296F /* TKKeyboardControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKKeyboardControl.swift; sourceTree = "<group>"; };
+		E14D47BC7B2560C8F14DC4A6 /* Pods-TKKeyboardControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKKeyboardControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE80AC634F28FE81E60E82DD /* Pods_TKKeyboardControl_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,12 +60,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92775110391DCEBF63ADD050 /* Pods_TKKeyboardControl_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E630216F0E11C781C05DEFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7EB3418B0236AEBB491AFD1 /* Pods-TKKeyboardControl_Example.debug.xcconfig */,
+				62FCABB88E0CDDC2BF5189A0 /* Pods-TKKeyboardControl_Example.release.xcconfig */,
+				E14D47BC7B2560C8F14DC4A6 /* Pods-TKKeyboardControl_Tests.debug.xcconfig */,
+				ABCF38A7EB3BD499C11072EE /* Pods-TKKeyboardControl_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		487EB3FB9DEB9691BA9387C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F070B7207E74C4BA2C2C87F /* Pods_TKKeyboardControl_Example.framework */,
+				8C41D76A164778FF43B1B21B /* Pods_TKKeyboardControl_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +94,8 @@
 				607FACD21AFB9204008FA782 /* Example for TKKeyboardControl */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
+				1E630216F0E11C781C05DEFE /* Pods */,
+				487EB3FB9DEB9691BA9387C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +111,6 @@
 		607FACD21AFB9204008FA782 /* Example for TKKeyboardControl */ = {
 			isa = PBXGroup;
 			children = (
-				FF21EF221CCDC8CB00EA296F /* TKKeyboardControl */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -127,14 +156,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		FF21EF221CCDC8CB00EA296F /* TKKeyboardControl */ = {
-			isa = PBXGroup;
-			children = (
-				FF21EF231CCDC8D700EA296F /* TKKeyboardControl.swift */,
-			);
-			name = TKKeyboardControl;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TKKeyboardControl_Example" */;
 			buildPhases = (
+				AD5E23AE3AB29ED2203E45B4 /* 📦 Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				16794E3BBE751EA510B314AE /* 📦 Embed Pods Frameworks */,
+				093F35C371C88E2E09EF5828 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TKKeyboardControl_Tests" */;
 			buildPhases = (
+				919FB8348E945BDD5CBD768B /* 📦 Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				C43E6BC1C461FC53EEDD286A /* 📦 Embed Pods Frameworks */,
+				11287250D9B6EBA18E731EF2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,12 +257,104 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		093F35C371C88E2E09EF5828 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11287250D9B6EBA18E731EF2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16794E3BBE751EA510B314AE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		919FB8348E945BDD5CBD768B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD5E23AE3AB29ED2203E45B4 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C43E6BC1C461FC53EEDD286A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF21EF241CCDC8D700EA296F /* TKKeyboardControl.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -355,6 +474,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7EB3418B0236AEBB491AFD1 /* Pods-TKKeyboardControl_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TKKeyboardControl/Info.plist;
@@ -368,6 +488,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62FCABB88E0CDDC2BF5189A0 /* Pods-TKKeyboardControl_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TKKeyboardControl/Info.plist;
@@ -381,6 +502,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E14D47BC7B2560C8F14DC4A6 /* Pods-TKKeyboardControl_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -399,6 +521,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABCF38A7EB3BD499C11072EE /* Pods-TKKeyboardControl_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
