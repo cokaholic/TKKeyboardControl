@@ -10,28 +10,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let inputBaseView = UIView()
     let textField = UITextField()
+    let sendButton = UIButton()
+    
+    let sideMargin: CGFloat = 5
+    let inputBaseViewHeight: CGFloat = 40
     let textFieldHeight: CGFloat = 30
+    let sendButtonWidth: CGFloat = 80
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.frame = CGRectMake(10, self.view.bounds.size.height - textFieldHeight, self.view.bounds.size.width - 20, textFieldHeight);
+        self.title = "TKKeyboardControl"
+        
+        inputBaseView.frame = CGRectMake(0, self.view.bounds.size.height - inputBaseViewHeight, self.view.bounds.size.width, inputBaseViewHeight)
+        inputBaseView.backgroundColor = UIColor.init(white: 0.9, alpha: 1.0)
+        self.view.addSubview(inputBaseView)
+        
+        textField.frame = CGRectMake(sideMargin, (inputBaseViewHeight - textFieldHeight)/2, self.view.bounds.size.width - sendButtonWidth - sideMargin*3, textFieldHeight);
         textField.backgroundColor = .whiteColor()
-        textField.placeholder = "Input here!"
-        textField.borderStyle = .Line
-        textField.textAlignment = .Center
+        textField.placeholder = "Input here."
+        textField.borderStyle = .RoundedRect
+        textField.textAlignment = .Left
+        inputBaseView.addSubview(textField)
+        
+        sendButton.frame = CGRectMake(CGRectGetMaxX(textField.frame) + sideMargin, sideMargin, sendButtonWidth, textFieldHeight)
+        sendButton.setTitle("Send", forState: .Normal)
+        inputBaseView.addSubview(sendButton)
         
         // Trigger Offset
-        self.view.keyboardTriggerOffset = self.textFieldHeight
+        self.view.keyboardTriggerOffset = self.inputBaseViewHeight
         
         // Add Keyboard Pannning
         self.view.addKeyboardPanningWithFrameBasedActionHandler({ (keyboardFrameInView, opening, closing) in
             
-            self.textField.frame.origin.y = keyboardFrameInView.origin.y - self.textFieldHeight
+            self.inputBaseView.frame.origin.y = keyboardFrameInView.origin.y - self.inputBaseViewHeight
             
             }, constraintBasedActionHandler: nil)
-        self.view.addSubview(textField)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
