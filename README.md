@@ -7,8 +7,6 @@
 
 ![keyboard_test](./Images/keyboard_test.gif "keyboard_test")  
 
-## Requirements
-
 ## Installation
 
 #### CocoaPods
