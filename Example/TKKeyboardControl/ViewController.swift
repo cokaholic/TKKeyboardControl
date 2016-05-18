@@ -25,18 +25,15 @@ class ViewController: UIViewController {
         
         self.title = "TKKeyboardControl"
         
-        inputBaseView.frame = CGRectMake(0, self.view.bounds.size.height - inputBaseViewHeight, self.view.bounds.size.width, inputBaseViewHeight)
         inputBaseView.backgroundColor = UIColor.init(white: 0.9, alpha: 1.0)
         self.view.addSubview(inputBaseView)
         
-        textField.frame = CGRectMake(sideMargin, (inputBaseViewHeight - textFieldHeight)/2, self.view.bounds.size.width - sendButtonWidth - sideMargin*3, textFieldHeight);
         textField.backgroundColor = .whiteColor()
         textField.placeholder = "Input here."
         textField.borderStyle = .RoundedRect
         textField.textAlignment = .Left
         inputBaseView.addSubview(textField)
         
-        sendButton.frame = CGRectMake(CGRectGetMaxX(textField.frame) + sideMargin, sideMargin, sendButtonWidth, textFieldHeight)
         sendButton.setTitle("Send", forState: .Normal)
         inputBaseView.addSubview(sendButton)
         
@@ -50,7 +47,20 @@ class ViewController: UIViewController {
             
             }, constraintBasedActionHandler: nil)
         
+        self.updateFrame()
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.updateFrame()
+    }
+    
+    private func updateFrame() {
+        inputBaseView.frame = CGRectMake(0, self.view.bounds.size.height - inputBaseViewHeight, self.view.bounds.size.width, inputBaseViewHeight)
+        textField.frame = CGRectMake(sideMargin, (inputBaseViewHeight - textFieldHeight)/2, self.view.bounds.size.width - sendButtonWidth - sideMargin*3, textFieldHeight)
+        sendButton.frame = CGRectMake(CGRectGetMaxX(textField.frame) + sideMargin, sideMargin, sendButtonWidth, textFieldHeight)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
