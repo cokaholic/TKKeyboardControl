@@ -14,6 +14,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		92775110391DCEBF63ADD050 /* Pods_TKKeyboardControl_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C41D76A164778FF43B1B21B /* Pods_TKKeyboardControl_Tests.framework */; };
 		CE80AC634F28FE81E60E82DD /* Pods_TKKeyboardControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F070B7207E74C4BA2C2C87F /* Pods_TKKeyboardControl_Example.framework */; };
+		FFF1A5E91CFEDA310064665F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1A5E81CFEDA310064665F /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		C569ACEC91ADE6AF17846B27 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDCECB28C24B0FDBB316F142 /* TKKeyboardControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TKKeyboardControl.podspec; path = ../TKKeyboardControl.podspec; sourceTree = "<group>"; };
 		E14D47BC7B2560C8F14DC4A6 /* Pods-TKKeyboardControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKKeyboardControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFF1A5E81CFEDA310064665F /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				FFF1A5E81CFEDA310064665F /* FirstViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF1A5E91CFEDA310064665F /* FirstViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

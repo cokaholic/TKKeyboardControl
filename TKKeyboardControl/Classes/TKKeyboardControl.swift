@@ -10,6 +10,8 @@ import Foundation
 
 public typealias TKKeyboardDidMoveBlock = ((keyboardFrameInView : CGRect, opening : Bool, closing : Bool) -> Void)?
 
+private let frameKeyPath = "frame"
+
 class TKKeyboardDidMoveBlockWrapper {
     var closure: TKKeyboardDidMoveBlock
     
@@ -60,11 +62,16 @@ public extension UIView {
     var keyboardWillRecede : Bool {
         
         get {
-            let keyboardViewHeight = self.keyboardActiveView!.bounds.size.height
-            let keyboardWindowHeight = self.keyboardActiveView!.superview!.bounds.size.height;
-            let touchLocationInKeyboardWindow = self.keyboardPanRecognizer!.locationInView(self.keyboardActiveView!.superview!)
+            
+            guard let activityView = self.keyboardActiveView else { return false }
+            guard let activityViewSuperView = activityView.superview else { return false }
+            guard let panGesture = self.keyboardPanRecognizer else { return false }
+            
+            let keyboardViewHeight = activityView.bounds.size.height
+            let keyboardWindowHeight = activityViewSuperView.bounds.size.height;
+            let touchLocationInKeyboardWindow = panGesture.locationInView(activityViewSuperView)
             let thresholdHeight = keyboardWindowHeight - keyboardViewHeight - self.keyboardTriggerOffset + 44.0
-            let velocity = self.keyboardPanRecognizer!.velocityInView(self.keyboardActiveView)
+            let velocity = panGesture.velocityInView(activityView)
             
             return touchLocationInKeyboardWindow.y >= thresholdHeight && velocity.y >= 0
         }
@@ -91,9 +98,9 @@ public extension UIView {
     
     func keyboardFrameInView() -> CGRect {
         
-        if self.keyboardActiveView != nil {
+        if let activityView = self.keyboardActiveView {
             
-            let keyboardFrameInView = self.convertRect(self.keyboardActiveView!.frame, fromView: self.keyboardActiveView?.superview)
+            let keyboardFrameInView = self.convertRect(activityView.frame, fromView: activityView.superview)
             return keyboardFrameInView
         }
         else {
@@ -119,7 +126,9 @@ public extension UIView {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardDidHideNotification, object: nil)
         
         // Unregister any gesture recognizer
-        self.removeGestureRecognizer(self.keyboardPanRecognizer!)
+        if let panRecognizer = self.keyboardPanRecognizer {
+            self.removeGestureRecognizer(panRecognizer)
+        }
         
         // Release a few properties
         self.frameBasedKeyboardDidMoveBlock = nil;
@@ -131,9 +140,9 @@ public extension UIView {
     func hideKeyboard() {
         
         if self.keyboardActiveView != nil {
-            self.keyboardActiveView!.hidden = true
-            self.keyboardActiveView!.userInteractionEnabled = false
-            self.keyboardActiveInput!.resignFirstResponder()
+            self.keyboardActiveView?.hidden = true
+            self.keyboardActiveView?.userInteractionEnabled = false
+            self.keyboardActiveInput?.resignFirstResponder()
         }
     }
 }
@@ -398,7 +407,7 @@ extension UIView : UIGestureRecognizerDelegate {
     func responderDidBecomeActive(notification: NSNotification) {
         
         self.keyboardActiveInput = notification.object as? UIResponder
-        if self.keyboardActiveInput!.inputAccessoryView == nil {
+        if self.keyboardActiveInput?.inputAccessoryView == nil {
             
             let textField = self.keyboardActiveInput as! UITextField
             if textField.respondsToSelector(Selector("inputAccessoryView")) {
@@ -415,14 +424,16 @@ extension UIView : UIGestureRecognizerDelegate {
     
     func inputKeyboardWillShow(notification: NSNotification) {
         
+        guard let userInfo = notification.userInfo else { return }
+        
         var keyboardEndFrameWindow: CGRect = CGRect()
-        notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.getValue(&keyboardEndFrameWindow)
+        userInfo[UIKeyboardFrameEndUserInfoKey]?.getValue(&keyboardEndFrameWindow)
         
         var keyboardTransitionDuration: Double = Double()
-        notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]?.getValue(&keyboardTransitionDuration)
+        userInfo[UIKeyboardAnimationDurationUserInfoKey]?.getValue(&keyboardTransitionDuration)
         
-        var keyboardTransitionAnimationCurve: UIViewAnimationCurve = UIViewAnimationCurve(rawValue:0)!
-        notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]?.getValue(&keyboardTransitionAnimationCurve)
+        var keyboardTransitionAnimationCurve: UIViewAnimationCurve = UIViewAnimationCurve.EaseInOut
+        userInfo[UIKeyboardAnimationCurveUserInfoKey]?.getValue(&keyboardTransitionAnimationCurve)
         
         self.keyboardActiveView?.hidden = false
         self.keyboardOpened = true
@@ -433,7 +444,7 @@ extension UIView : UIGestureRecognizerDelegate {
         
         if constraintBasedKeyboardDidMoveBlockCalled {
             
-            self.constraintBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: true, closing: false)
+            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: true, closing: false)
         }
         
         UIView.animateWithDuration(keyboardTransitionDuration,
@@ -445,7 +456,7 @@ extension UIView : UIGestureRecognizerDelegate {
                                         self.layoutIfNeeded()
                                     }
                                     if self.frameBasedKeyboardDidMoveBlock != nil && !CGRectIsNull(keyboardEndFrameView) {
-                                        self.frameBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: true, closing: false)
+                                        self.frameBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: true, closing: false)
                                     }
         }) { (finished: Bool) in
             if self.panning {
@@ -454,7 +465,9 @@ extension UIView : UIGestureRecognizerDelegate {
                 self.keyboardPanRecognizer?.minimumNumberOfTouches = 1
                 self.keyboardPanRecognizer?.delegate = self
                 self.keyboardPanRecognizer?.cancelsTouchesInView = false
-                self.addGestureRecognizer(self.keyboardPanRecognizer!)
+                
+                guard let panGesture = self.keyboardPanRecognizer else { return }
+                self.addGestureRecognizer(panGesture)
             }
         }
     }
@@ -471,21 +484,23 @@ extension UIView : UIGestureRecognizerDelegate {
         }
         
         if !self.keyboardFrameObserved {
-            self.keyboardActiveView!.addObserver(self, forKeyPath: "frame", options: .New, context: nil)
+            self.keyboardActiveView?.addObserver(self, forKeyPath: frameKeyPath, options: .New, context: nil)
             self.keyboardFrameObserved = true
         }
     }
     
     func inputKeyboardWillChangeFrame(notification: NSNotification) {
         
+        guard let userInfo = notification.userInfo else { return }
+        
         var keyboardEndFrameWindow: CGRect = CGRect()
-        notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.getValue(&keyboardEndFrameWindow)
+        userInfo[UIKeyboardFrameEndUserInfoKey]?.getValue(&keyboardEndFrameWindow)
         
         var keyboardTransitionDuration: Double = Double()
-        notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]?.getValue(&keyboardTransitionDuration)
+        userInfo[UIKeyboardAnimationDurationUserInfoKey]?.getValue(&keyboardTransitionDuration)
         
-        var keyboardTransitionAnimationCurve: UIViewAnimationCurve = UIViewAnimationCurve(rawValue:0)!
-        notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]?.getValue(&keyboardTransitionAnimationCurve)
+        var keyboardTransitionAnimationCurve: UIViewAnimationCurve = UIViewAnimationCurve.EaseInOut
+        userInfo[UIKeyboardAnimationCurveUserInfoKey]?.getValue(&keyboardTransitionAnimationCurve)
         
         let keyboardEndFrameView = self.convertRect(keyboardEndFrameWindow, fromView: nil)
         
@@ -493,7 +508,7 @@ extension UIView : UIGestureRecognizerDelegate {
         
         if constraintBasedKeyboardDidMoveBlockCalled {
             
-            self.constraintBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
+            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
         }
         
         UIView.animateWithDuration(keyboardTransitionDuration,
@@ -505,7 +520,7 @@ extension UIView : UIGestureRecognizerDelegate {
                                         self.layoutIfNeeded()
                                     }
                                     if self.frameBasedKeyboardDidMoveBlock != nil && !CGRectIsNull(keyboardEndFrameView) {
-                                        self.frameBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
+                                        self.frameBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
                                     }
             }, completion:nil)
     }
@@ -516,14 +531,16 @@ extension UIView : UIGestureRecognizerDelegate {
     
     func inputKeyboardWillHide(notification: NSNotification) {
         
+        guard let userInfo = notification.userInfo else { return }
+        
         var keyboardEndFrameWindow: CGRect = CGRect()
-        notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.getValue(&keyboardEndFrameWindow)
+        userInfo[UIKeyboardFrameEndUserInfoKey]?.getValue(&keyboardEndFrameWindow)
         
         var keyboardTransitionDuration: Double = Double()
-        notification.userInfo![UIKeyboardAnimationDurationUserInfoKey]?.getValue(&keyboardTransitionDuration)
+        userInfo[UIKeyboardAnimationDurationUserInfoKey]?.getValue(&keyboardTransitionDuration)
         
-        var keyboardTransitionAnimationCurve: UIViewAnimationCurve = UIViewAnimationCurve(rawValue:0)!
-        notification.userInfo![UIKeyboardAnimationCurveUserInfoKey]?.getValue(&keyboardTransitionAnimationCurve)
+        var keyboardTransitionAnimationCurve: UIViewAnimationCurve = UIViewAnimationCurve.EaseInOut
+        userInfo[UIKeyboardAnimationCurveUserInfoKey]?.getValue(&keyboardTransitionAnimationCurve)
         
         let keyboardEndFrameView = self.convertRect(keyboardEndFrameWindow, fromView: nil)
         
@@ -531,7 +548,7 @@ extension UIView : UIGestureRecognizerDelegate {
         
         if constraintBasedKeyboardDidMoveBlockCalled {
             
-            self.constraintBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
+            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
         }
         
         UIView.animateWithDuration(keyboardTransitionDuration,
@@ -543,14 +560,16 @@ extension UIView : UIGestureRecognizerDelegate {
                                         self.layoutIfNeeded()
                                     }
                                     if self.frameBasedKeyboardDidMoveBlock != nil && !CGRectIsNull(keyboardEndFrameView) {
-                                        self.frameBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
+                                        self.frameBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
                                     }
         }) { (finished: Bool) in
-            self.removeGestureRecognizer(self.keyboardPanRecognizer!)
+            if let panRecognizer = self.keyboardPanRecognizer {
+                self.removeGestureRecognizer(panRecognizer)
+            }
             self.keyboardPanRecognizer = nil
             
             if self.keyboardFrameObserved {
-                self.keyboardActiveView!.removeObserver(self, forKeyPath: "frame")
+                self.keyboardActiveView?.removeObserver(self, forKeyPath: frameKeyPath)
                 self.keyboardFrameObserved = false
             }
         }
@@ -567,9 +586,11 @@ extension UIView : UIGestureRecognizerDelegate {
     
     override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         
-        if keyPath! == "frame" && object as? UIView == self.keyboardActiveView {
+        guard let keyPath = keyPath else { return }
+        
+        if keyPath == frameKeyPath && object as? UIView == self.keyboardActiveView {
             
-            guard let keyboardEndFrameWindow = object?.valueForKey(keyPath!)?.CGRectValue() else { return }
+            guard let keyboardEndFrameWindow = object?.valueForKey(keyPath)?.CGRectValue() else { return }
             guard var keyboardEndFrameView = self.keyboardActiveView?.frame else { return }
             keyboardEndFrameView.origin.y = keyboardEndFrameWindow.origin.y
             
@@ -577,14 +598,16 @@ extension UIView : UIGestureRecognizerDelegate {
                 return
             }
             
-            if !(self.keyboardActiveView?.hidden)! && !CGRectIsNull(keyboardEndFrameView) {
+            guard let activityView = self.keyboardActiveView else { return }
+            
+            if !activityView.hidden && !CGRectIsNull(keyboardEndFrameView) {
                 
                 if self.frameBasedKeyboardDidMoveBlock != nil {
-                    self.frameBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
+                    self.frameBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
                 }
                 
                 if self.constraintBasedKeyboardDidMoveBlock != nil {
-                    self.constraintBasedKeyboardDidMoveBlock!(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
+                    self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
                     self.layoutIfNeeded()
                 }
             }
@@ -609,7 +632,9 @@ extension UIView : UIGestureRecognizerDelegate {
         
         if gestureRecognizer == self.keyboardPanRecognizer {
             
-            return (!(touch.view?.isFirstResponder())! || (self.isKindOfClass(UITextView) && self.isEqual(touch.view)))
+            guard let touchView = touch.view else { return true }
+            
+            return (!touchView.isFirstResponder() || (self.isKindOfClass(UITextView) && self.isEqual(touchView)))
         }
         else {
             return true
@@ -629,21 +654,20 @@ extension UIView : UIGestureRecognizerDelegate {
             self.keyboardActiveView?.hidden = false
         }
         
-        if self.keyboardActiveView?.superview == nil {
-            return
-        }
+        guard let activityView = self.keyboardActiveView else { return }
+        guard let activityViewSuperView = activityView.superview else { return }
         
-        let keyboardViewHeight : CGFloat = self.keyboardActiveView!.bounds.size.height
-        let keyboardWindowHeight : CGFloat = self.keyboardActiveView!.superview!.bounds.size.height
-        let touchLocationInKeyboardWindow = gesture.locationInView(self.keyboardActiveView?.superview)
+        let keyboardViewHeight : CGFloat = activityView.bounds.size.height
+        let keyboardWindowHeight : CGFloat = activityViewSuperView.bounds.size.height
+        let touchLocationInKeyboardWindow = gesture.locationInView(activityView.superview)
         
         if touchLocationInKeyboardWindow.y > keyboardWindowHeight - keyboardViewHeight - self.keyboardTriggerOffset {
             
-            self.keyboardActiveView?.userInteractionEnabled = false
+            activityView.userInteractionEnabled = false
         }
         else {
             
-            self.keyboardActiveView?.userInteractionEnabled = true
+            activityView.userInteractionEnabled = true
         }
         
         switch gesture.state {
@@ -653,19 +677,19 @@ extension UIView : UIGestureRecognizerDelegate {
             break
             
         case .Changed:
-            var newKeyboardViewFrame = self.keyboardActiveView?.frame
-            newKeyboardViewFrame?.origin.y = touchLocationInKeyboardWindow.y + self.keyboardTriggerOffset
-            newKeyboardViewFrame?.origin.y = min((newKeyboardViewFrame?.origin.y)!, keyboardWindowHeight)
-            newKeyboardViewFrame?.origin.y = max((newKeyboardViewFrame?.origin.y)!, keyboardWindowHeight - keyboardViewHeight)
+            var newKeyboardViewFrame = activityView.frame
+            newKeyboardViewFrame.origin.y = touchLocationInKeyboardWindow.y + self.keyboardTriggerOffset
+            newKeyboardViewFrame.origin.y = min(newKeyboardViewFrame.origin.y, keyboardWindowHeight)
+            newKeyboardViewFrame.origin.y = max(newKeyboardViewFrame.origin.y, keyboardWindowHeight - keyboardViewHeight)
             
-            if newKeyboardViewFrame?.origin.y != self.keyboardActiveView?.frame.origin.y {
+            if newKeyboardViewFrame.origin.y != self.keyboardActiveView?.frame.origin.y {
                 
                 UIView.animateWithDuration(0,
                                            delay: 0,
                                            options: [.TransitionNone, .BeginFromCurrentState],
                                            animations: {
                                             
-                                            self.keyboardActiveView?.frame = newKeyboardViewFrame!
+                                            activityView.frame = newKeyboardViewFrame
                     }, completion: nil)
             }
             
@@ -684,17 +708,17 @@ extension UIView : UIGestureRecognizerDelegate {
                 shouldRecede = true
             }
             
-            var newKeyboardViewFrame = self.keyboardActiveView?.frame
-            newKeyboardViewFrame?.origin.y = !shouldRecede ? keyboardWindowHeight - keyboardViewHeight : keyboardWindowHeight
+            var newKeyboardViewFrame = activityView.frame
+            newKeyboardViewFrame.origin.y = !shouldRecede ? keyboardWindowHeight - keyboardViewHeight : keyboardWindowHeight
             
             UIView.animateWithDuration(0.25,
                                        delay: 0,
                                        options: [.CurveEaseOut, .BeginFromCurrentState],
                                        animations: {
-                                        self.keyboardActiveView?.frame = newKeyboardViewFrame!
+                                        activityView.frame = newKeyboardViewFrame
                 }, completion: { (finished: Bool) in
                     
-                    self.keyboardActiveView?.userInteractionEnabled = !shouldRecede
+                    activityView.userInteractionEnabled = !shouldRecede
                     
                     if shouldRecede {
                         self.hideKeyboard()
@@ -729,12 +753,16 @@ extension UIView : UIGestureRecognizerDelegate {
     func findInputSetHostView() -> UIView? {
         
         if #available(iOS 9, *) {
+            
+            guard let remoteKeyboardWindowClass = NSClassFromString("UIRemoteKeyboardWindow") else { return nil }
+            guard let inputSetHostViewClass = NSClassFromString("UIInputSetHostView") else { return nil }
+            
             for window in UIApplication.sharedApplication().windows {
-                if window.isKindOfClass(NSClassFromString("UIRemoteKeyboardWindow")!) {
+                if window.isKindOfClass(remoteKeyboardWindowClass) {
                     for subView in window.subviews {
-                        if subView.isKindOfClass(NSClassFromString("UIInputSetHostView")!) {
+                        if subView.isKindOfClass(inputSetHostViewClass) {
                             for subSubView in subView.subviews {
-                                if subSubView.isKindOfClass(NSClassFromString("UIInputSetHostView")!) {
+                                if subSubView.isKindOfClass(inputSetHostViewClass) {
                                     return subSubView
                                 }
                             }
@@ -744,7 +772,7 @@ extension UIView : UIGestureRecognizerDelegate {
             }
         }
         else {
-            return (self.keyboardActiveInput!.inputAccessoryView?.superview)!
+            return self.keyboardActiveInput?.inputAccessoryView?.superview
         }
         
         return nil

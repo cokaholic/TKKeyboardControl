@@ -41,13 +41,22 @@ class ViewController: UIViewController {
         self.view.keyboardTriggerOffset = self.inputBaseViewHeight
         
         // Add Keyboard Pannning
-        self.view.addKeyboardPanningWithFrameBasedActionHandler({ (keyboardFrameInView, opening, closing) in
+        self.view.addKeyboardPanningWithFrameBasedActionHandler({ [weak self] (keyboardFrameInView, opening, closing) in
             
-            self.inputBaseView.frame.origin.y = keyboardFrameInView.origin.y - self.inputBaseViewHeight
+            guard let weakSelf = self else { return }
+            weakSelf.inputBaseView.frame.origin.y = keyboardFrameInView.origin.y - weakSelf.inputBaseViewHeight
             
             }, constraintBasedActionHandler: nil)
         
+        let tapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(ViewController.closeKeyboard))
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+        
         self.updateFrame()
+    }
+    
+    deinit {
+        print("deinit called")
+        self.view.removeKeyboardControl()
     }
     
     override func viewWillLayoutSubviews() {
@@ -59,6 +68,13 @@ class ViewController: UIViewController {
         inputBaseView.frame = CGRectMake(0, self.view.bounds.size.height - inputBaseViewHeight, self.view.bounds.size.width, inputBaseViewHeight)
         textField.frame = CGRectMake(sideMargin, (inputBaseViewHeight - textFieldHeight)/2, self.view.bounds.size.width - sendButtonWidth - sideMargin*3, textFieldHeight)
         sendButton.frame = CGRectMake(CGRectGetMaxX(textField.frame) + sideMargin, sideMargin, sendButtonWidth, textFieldHeight)
+    }
+    
+    @objc private func closeKeyboard() {
+        
+        if self.view.isKeyboardOpened() {
+            self.view.hideKeyboard()
+        }
     }
     
     override func didReceiveMemoryWarning() {
