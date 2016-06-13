@@ -140,7 +140,7 @@ public extension UIView {
     func hideKeyboard() {
         
         if self.keyboardActiveView != nil {
-            self.keyboardActiveView?.hidden = false
+            self.keyboardActiveView?.hidden = true
             self.keyboardActiveView?.userInteractionEnabled = false
             self.keyboardActiveInput?.resignFirstResponder()
         }
