@@ -607,7 +607,7 @@ extension UIView : UIGestureRecognizerDelegate {
                 }
                 
                 if self.constraintBasedKeyboardDidMoveBlock != nil {
-                    self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
+                    self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
                     self.layoutIfNeeded()
                 }
             }
