@@ -444,7 +444,7 @@ extension UIView : UIGestureRecognizerDelegate {
         
         if constraintBasedKeyboardDidMoveBlockCalled {
             
-            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: true, closing: false)
+            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameWindow, opening: true, closing: false)
         }
         
         UIView.animateWithDuration(keyboardTransitionDuration,
@@ -508,7 +508,7 @@ extension UIView : UIGestureRecognizerDelegate {
         
         if constraintBasedKeyboardDidMoveBlockCalled {
             
-            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
+            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameWindow, opening: false, closing: false)
         }
         
         UIView.animateWithDuration(keyboardTransitionDuration,
@@ -548,7 +548,7 @@ extension UIView : UIGestureRecognizerDelegate {
         
         if constraintBasedKeyboardDidMoveBlockCalled {
             
-            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: true)
+            self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameWindow, opening: false, closing: true)
         }
         
         UIView.animateWithDuration(keyboardTransitionDuration,
@@ -607,7 +607,7 @@ extension UIView : UIGestureRecognizerDelegate {
                 }
                 
                 if self.constraintBasedKeyboardDidMoveBlock != nil {
-                    self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameView, opening: false, closing: false)
+                    self.constraintBasedKeyboardDidMoveBlock?(keyboardFrameInView: keyboardEndFrameWindow, opening: false, closing: false)
                     self.layoutIfNeeded()
                 }
             }
