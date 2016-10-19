@@ -11,15 +11,15 @@ import UIKit
 
 final class FirstViewController: UIViewController {
     
-    let nextButton = UIButton(type: .System)
+    let nextButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Top"
         
-        self.nextButton.setTitle("Go Next", forState: .Normal)
-        self.nextButton.addTarget(self, action: #selector(FirstViewController.goNextViewController), forControlEvents: .TouchUpInside)
+        self.nextButton.setTitle("Go Next", for: .normal)
+        self.nextButton.addTarget(self, action: #selector(FirstViewController.goNextViewController), for: .touchUpInside)
         self.view.addSubview(self.nextButton)
         self.updateFrame()
     }

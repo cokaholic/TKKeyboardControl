@@ -28,13 +28,13 @@ class ViewController: UIViewController {
         inputBaseView.backgroundColor = UIColor.init(white: 0.9, alpha: 1.0)
         self.view.addSubview(inputBaseView)
         
-        textField.backgroundColor = .whiteColor()
+        textField.backgroundColor = .white
         textField.placeholder = "Input here."
-        textField.borderStyle = .RoundedRect
-        textField.textAlignment = .Left
+        textField.borderStyle = .roundedRect
+        textField.textAlignment = .left
         inputBaseView.addSubview(textField)
         
-        sendButton.setTitle("Send", forState: .Normal)
+        sendButton.setTitle("Send", for: .normal)
         inputBaseView.addSubview(sendButton)
         
         // Trigger Offset
@@ -65,9 +65,9 @@ class ViewController: UIViewController {
     }
     
     private func updateFrame() {
-        inputBaseView.frame = CGRectMake(0, self.view.bounds.size.height - inputBaseViewHeight, self.view.bounds.size.width, inputBaseViewHeight)
-        textField.frame = CGRectMake(sideMargin, (inputBaseViewHeight - textFieldHeight)/2, self.view.bounds.size.width - sendButtonWidth - sideMargin*3, textFieldHeight)
-        sendButton.frame = CGRectMake(CGRectGetMaxX(textField.frame) + sideMargin, sideMargin, sendButtonWidth, textFieldHeight)
+        inputBaseView.frame = CGRect(x:0, y:self.view.bounds.size.height - inputBaseViewHeight, width:self.view.bounds.size.width, height:inputBaseViewHeight)
+        textField.frame = CGRect(x:sideMargin, y:(inputBaseViewHeight - textFieldHeight)/2, width:self.view.bounds.size.width - sendButtonWidth - sideMargin*3, height:textFieldHeight)
+        sendButton.frame = CGRect(x:textField.frame.maxX + sideMargin, y:sideMargin, width:sendButtonWidth, height:textFieldHeight)
     }
     
     @objc private func closeKeyboard() {
