@@ -1,6 +1,6 @@
 # TKKeyboardControl
 
-TKKeyboardControl adds keyboard awareness and scrolling dismissal (like iMessages app) to any view with only 1 line of code **for Swift**.  
+TKKeyboardControl adds keyboard awareness and scrolling dismissal (like iMessages app) to any view with only 1 line of code **for Swift3.0**.  
 This library is inspired by [DAKeyboardControl](https://github.com/danielamitay/DAKeyboardControl).
 
 [![CI Status](http://img.shields.io/travis/cztatsumi-keisuke/TKKeyboardControl.svg?style=flat)](https://travis-ci.org/cztatsumi-keisuke/TKKeyboardControl)
@@ -94,8 +94,9 @@ self.view.removeKeyboardControl()
 
 ## Requirements
 
-- Xcode 7.0 or greater
+- Xcode 8.0 or greater
 - iOS8.0 or greater
+- Swift3.0 or greater
 
 ## Author
 
