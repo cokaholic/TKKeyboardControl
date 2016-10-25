@@ -591,8 +591,7 @@ extension UIView : UIGestureRecognizerDelegate {
         guard let keyPath = keyPath else { return }
         
         if keyPath == frameKeyPath && object as? UIView == self.keyboardActiveView {
-            
-            guard let keyboardEndFrameWindow = ((object as AnyObject).value(forKey: keyPath) as AnyObject).cgRectValue else { return }
+            guard let keyboardEndFrameWindow = (object as? UIView)?.frame else { return }
             guard var keyboardEndFrameView = self.keyboardActiveView?.frame else { return }
             keyboardEndFrameView.origin.y = keyboardEndFrameWindow.origin.y
             
