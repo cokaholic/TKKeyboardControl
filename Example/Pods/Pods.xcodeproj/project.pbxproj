@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		073A8869F8B6C67747C63C94C1BD4EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */; };
-		1C3769E17B12BB75C220E1C2890C0549 /* Pods-TKKeyboardControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A78834C7B39B7A3D19901C3A67560DA1 /* Pods-TKKeyboardControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28E162CE79B35285468E4778AD788AC5 /* TKKeyboardControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACEEF722EC9BD04CE9471E43FBB5BD37 /* TKKeyboardControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44749D9D0E3D468E5AA13433FE42C911 /* TKKeyboardControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED61D6EA591EE413867A77427BF0590 /* TKKeyboardControl-dummy.m */; };
-		6DC3EFC0D09BF73FDBA48E0A7DD4C4C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
-		882BF588C2BC6347D9E5629718F11520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
-		9D481FE061DADE2E9A97D408BCFEB34A /* Pods-TKKeyboardControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BBBC3CA2D0AC4BF899C5E42D405464 /* Pods-TKKeyboardControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4C48A03ABCEFD09F6997C3E568420E6 /* Pods-TKKeyboardControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E9741663010E8EF3C58572E7FE8AB /* Pods-TKKeyboardControl_Tests-dummy.m */; };
-		BA888E6FFEDD03A3CBACE6663761243B /* TKKeyboardControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D4D82B9F0EC325EBE335A0E60780 /* TKKeyboardControl.swift */; };
-		D41942B9357EF82F998BBDA380FE0BA0 /* Pods-TKKeyboardControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4440D0AB829D5EC7B4C2002C42750 /* Pods-TKKeyboardControl_Example-dummy.m */; };
-		F7BA13CBC8FB726458D105DD3BE4A7C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		017CFF90F785CAC36735623D57CD5E2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		2CBAC37F80EA3FD824EC7261DB80BDC2 /* TKKeyboardControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACEEF722EC9BD04CE9471E43FBB5BD37 /* TKKeyboardControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		427D05794430DDAF24AC2D5553AE93A8 /* Pods-TKKeyboardControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BBBC3CA2D0AC4BF899C5E42D405464 /* Pods-TKKeyboardControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FB23C0A22CCB25A5DF4B0171F1EE5E2 /* TKKeyboardControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7D4D82B9F0EC325EBE335A0E60780 /* TKKeyboardControl.swift */; };
+		532187C433FBD72F7057D7187C477640 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		55F32991B4F6FF66CC8C26E235B3B955 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		7763312FB51EFD04C207F626F4137C78 /* Pods-TKKeyboardControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A78834C7B39B7A3D19901C3A67560DA1 /* Pods-TKKeyboardControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B7727E8B13F131B3A386D2D71565886 /* Pods-TKKeyboardControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E9741663010E8EF3C58572E7FE8AB /* Pods-TKKeyboardControl_Tests-dummy.m */; };
+		9E21DB223C5F0386E105F44A9AFE8681 /* TKKeyboardControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED61D6EA591EE413867A77427BF0590 /* TKKeyboardControl-dummy.m */; };
+		EF0231677A1866EC461DAE2B580C0656 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		FDE0C40078249DE73B477B28F087A2F0 /* Pods-TKKeyboardControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4440D0AB829D5EC7B4C2002C42750 /* Pods-TKKeyboardControl_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		59424371BDD49D22431D32B9971E8F7B /* PBXContainerItemProxy */ = {
+		85C1D4E1D953D1C6F2F9EF418512BF8B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1C82CE6A539CEF57567532C47FD732D6;
+			remoteGlobalIDString = 73624702704ECBC5D1FBE4D82302A2B5;
 			remoteInfo = TKKeyboardControl;
 		};
-		B462561EE3759536DD0379A5C8B1F504 /* PBXContainerItemProxy */ = {
+		C87349A26069C1024A4E390D2221BB4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1C82CE6A539CEF57567532C47FD732D6;
+			remoteGlobalIDString = 73624702704ECBC5D1FBE4D82302A2B5;
 			remoteInfo = TKKeyboardControl;
 		};
 /* End PBXContainerItemProxy section */
@@ -40,9 +40,9 @@
 /* Begin PBXFileReference section */
 		195A11097DDF4A8C0A2D06A599370355 /* Pods-TKKeyboardControl_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Tests-resources.sh"; sourceTree = "<group>"; };
 		2149C7764812FA0828773C60B265FD23 /* Pods-TKKeyboardControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TKKeyboardControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2BE8AFBE6B1C6A8F9B1D15C3459491A5 /* Pods-TKKeyboardControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TKKeyboardControl_Example.modulemap"; sourceTree = "<group>"; };
+		2BE8AFBE6B1C6A8F9B1D15C3459491A5 /* Pods-TKKeyboardControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TKKeyboardControl_Example.modulemap"; sourceTree = "<group>"; };
 		2C14B907928832A38831BFD77B6D312D /* Pods-TKKeyboardControl_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Example-resources.sh"; sourceTree = "<group>"; };
-		317A817E9D73AE307998C4A202DBEB0E /* TKKeyboardControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TKKeyboardControl.modulemap; sourceTree = "<group>"; };
+		317A817E9D73AE307998C4A202DBEB0E /* TKKeyboardControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TKKeyboardControl.modulemap; sourceTree = "<group>"; };
 		31CA6A7448BCC120E2F1EB575EF74DFC /* Pods-TKKeyboardControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Example-frameworks.sh"; sourceTree = "<group>"; };
 		365AE13B2D0D17B6963E55B55236C244 /* Pods-TKKeyboardControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TKKeyboardControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E38E9C20024C986DBFFE7903707A77F /* Pods-TKKeyboardControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TKKeyboardControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -50,52 +50,52 @@
 		58C4440D0AB829D5EC7B4C2002C42750 /* Pods-TKKeyboardControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TKKeyboardControl_Example-dummy.m"; sourceTree = "<group>"; };
 		58D61D13DD94B9237D832EA09DD67F72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8E9741663010E8EF3C58572E7FE8AB /* Pods-TKKeyboardControl_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TKKeyboardControl_Tests-dummy.m"; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		61721D2608AF011EA820D79F0E4E4494 /* Pods-TKKeyboardControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TKKeyboardControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		65BBBC3CA2D0AC4BF899C5E42D405464 /* Pods-TKKeyboardControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TKKeyboardControl_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		86956CA85AA22409545984F1427F5C08 /* Pods-TKKeyboardControl_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9ED61D6EA591EE413867A77427BF0590 /* TKKeyboardControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TKKeyboardControl-dummy.m"; sourceTree = "<group>"; };
 		A08718C938D14F8CBA9821003A7A3810 /* TKKeyboardControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TKKeyboardControl.xcconfig; sourceTree = "<group>"; };
 		A78834C7B39B7A3D19901C3A67560DA1 /* Pods-TKKeyboardControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TKKeyboardControl_Example-umbrella.h"; sourceTree = "<group>"; };
 		ACEEF722EC9BD04CE9471E43FBB5BD37 /* TKKeyboardControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TKKeyboardControl-umbrella.h"; sourceTree = "<group>"; };
-		AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B2A9B1E4AF8DA53EC3754E0E50AE1B19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C84968BFBE2ED5C7CD6A70AA37967B9B /* Pods-TKKeyboardControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TKKeyboardControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CAF68A74E9AEFA34A12AB86430C12BBC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D635D41133915B228CE899EF89DD95CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D82BF6F451F9626F493DF0C112B9C206 /* Pods_TKKeyboardControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKKeyboardControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82BF6F451F9626F493DF0C112B9C206 /* Pods_TKKeyboardControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TKKeyboardControl_Tests.framework; path = "Pods-TKKeyboardControl_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E347CE7F406EB97F10F466D71A93AB35 /* TKKeyboardControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TKKeyboardControl-prefix.pch"; sourceTree = "<group>"; };
 		EFA7D4D82B9F0EC325EBE335A0E60780 /* TKKeyboardControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKKeyboardControl.swift; sourceTree = "<group>"; };
 		F09A66671C9DBC9BA0F2F007386A99B9 /* Pods-TKKeyboardControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TKKeyboardControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F1DCCFF5387B412C14B658D235D6636C /* Pods-TKKeyboardControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TKKeyboardControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F7B34F968060DB9A858384D6D6C49A7A /* Pods-TKKeyboardControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TKKeyboardControl_Tests.modulemap"; sourceTree = "<group>"; };
-		F9D8C2FF6413600AFFA6B9EED2F29A79 /* TKKeyboardControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TKKeyboardControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE247675F668EC3F9EFA23A9B4C29F6E /* Pods_TKKeyboardControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKKeyboardControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B34F968060DB9A858384D6D6C49A7A /* Pods-TKKeyboardControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TKKeyboardControl_Tests.modulemap"; sourceTree = "<group>"; };
+		F9D8C2FF6413600AFFA6B9EED2F29A79 /* TKKeyboardControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TKKeyboardControl.framework; path = TKKeyboardControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE247675F668EC3F9EFA23A9B4C29F6E /* Pods_TKKeyboardControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TKKeyboardControl_Example.framework; path = "Pods-TKKeyboardControl_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		705AFFA16CD80FFECF0FDAE84094AF4A /* Frameworks */ = {
+		94C1B46A77B88FC150524681FCD722C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7BA13CBC8FB726458D105DD3BE4A7C1 /* Foundation.framework in Frameworks */,
+				EF0231677A1866EC461DAE2B580C0656 /* Foundation.framework in Frameworks */,
+				55F32991B4F6FF66CC8C26E235B3B955 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C44232E40AEE5A4795E0EC0E85322E2 /* Frameworks */ = {
+		ABD3D30BDA00064EFB0A876B965693DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				882BF588C2BC6347D9E5629718F11520 /* Foundation.framework in Frameworks */,
+				532187C433FBD72F7057D7187C477640 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B26F0CAEC36D5E461B630FB1084578A4 /* Frameworks */ = {
+		BB770F8AC675D26AF020573D926A491F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC3EFC0D09BF73FDBA48E0A7DD4C4C7 /* Foundation.framework in Frameworks */,
-				073A8869F8B6C67747C63C94C1BD4EC3 /* UIKit.framework in Frameworks */,
+				017CFF90F785CAC36735623D57CD5E2E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +128,7 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E294F3BD993E240DCFCB4DC1329C9F36 /* iOS */,
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,6 +175,7 @@
 			children = (
 				EFA7D4D82B9F0EC325EBE335A0E60780 /* TKKeyboardControl.swift */,
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -183,6 +184,7 @@
 			children = (
 				844410D69F8E7549DC119710E913E83B /* Classes */,
 			);
+			name = TKKeyboardControl;
 			path = TKKeyboardControl;
 			sourceTree = "<group>";
 		};
@@ -196,11 +198,11 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		E294F3BD993E240DCFCB4DC1329C9F36 /* iOS */ = {
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D635D41133915B228CE899EF89DD95CE /* Foundation.framework */,
-				AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */,
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -236,40 +238,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4667FBA96C88CACFBB0FBFA4BA594453 /* Headers */ = {
+		6C935BD94468D4585EB49BBEA20C4D11 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28E162CE79B35285468E4778AD788AC5 /* TKKeyboardControl-umbrella.h in Headers */,
+				2CBAC37F80EA3FD824EC7261DB80BDC2 /* TKKeyboardControl-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A74CBBF01BBEE0462CFDE2B85242F21A /* Headers */ = {
+		76F46C9543F37AA7F1F9148346446D91 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D481FE061DADE2E9A97D408BCFEB34A /* Pods-TKKeyboardControl_Tests-umbrella.h in Headers */,
+				7763312FB51EFD04C207F626F4137C78 /* Pods-TKKeyboardControl_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E425F01FFEC1E72903CDD4E7F292684D /* Headers */ = {
+		E589005488F1A87E7EA194E0ED3E018C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C3769E17B12BB75C220E1C2890C0549 /* Pods-TKKeyboardControl_Example-umbrella.h in Headers */,
+				427D05794430DDAF24AC2D5553AE93A8 /* Pods-TKKeyboardControl_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1C82CE6A539CEF57567532C47FD732D6 /* TKKeyboardControl */ = {
+		614F4BDF0953B8044B73FC41BAA13F33 /* Pods-TKKeyboardControl_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEB365EC7E672AD9A32401D3C7F8A007 /* Build configuration list for PBXNativeTarget "TKKeyboardControl" */;
+			buildConfigurationList = 7CEADB31B77FA9008C22E807B76D1656 /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Example" */;
 			buildPhases = (
-				4023DA13E9286B4A0B906163653D5916 /* Sources */,
-				B26F0CAEC36D5E461B630FB1084578A4 /* Frameworks */,
-				4667FBA96C88CACFBB0FBFA4BA594453 /* Headers */,
+				EE828F4049AB015E3E9FAF50D965387B /* Sources */,
+				BB770F8AC675D26AF020573D926A491F /* Frameworks */,
+				76F46C9543F37AA7F1F9148346446D91 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57FBC633FD2816B7E97769A02588DD83 /* PBXTargetDependency */,
+			);
+			name = "Pods-TKKeyboardControl_Example";
+			productName = "Pods-TKKeyboardControl_Example";
+			productReference = FE247675F668EC3F9EFA23A9B4C29F6E /* Pods_TKKeyboardControl_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73624702704ECBC5D1FBE4D82302A2B5 /* TKKeyboardControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D146610ADAC12EAF7C48AE7B95B524C7 /* Build configuration list for PBXNativeTarget "TKKeyboardControl" */;
+			buildPhases = (
+				7F744A0D35C8AA6F8A669AA17471568C /* Sources */,
+				94C1B46A77B88FC150524681FCD722C2 /* Frameworks */,
+				6C935BD94468D4585EB49BBEA20C4D11 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -280,36 +300,18 @@
 			productReference = F9D8C2FF6413600AFFA6B9EED2F29A79 /* TKKeyboardControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5B6A099A0978A771244FEE85B65E578E /* Pods-TKKeyboardControl_Example */ = {
+		B70641054549E0817E018B86EBBB586F /* Pods-TKKeyboardControl_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C8D460E361C2B97E2522367068E069E /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Example" */;
+			buildConfigurationList = A21B59C1987F825963572C333834A6FF /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Tests" */;
 			buildPhases = (
-				14B523D6B0E287BAE2350DC79631D0E8 /* Sources */,
-				7C44232E40AEE5A4795E0EC0E85322E2 /* Frameworks */,
-				E425F01FFEC1E72903CDD4E7F292684D /* Headers */,
+				3B66802A4302F6761C92EC0D0263C037 /* Sources */,
+				ABD3D30BDA00064EFB0A876B965693DA /* Frameworks */,
+				E589005488F1A87E7EA194E0ED3E018C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				483B70B6085EB46347DCEC070C3664A1 /* PBXTargetDependency */,
-			);
-			name = "Pods-TKKeyboardControl_Example";
-			productName = "Pods-TKKeyboardControl_Example";
-			productReference = FE247675F668EC3F9EFA23A9B4C29F6E /* Pods_TKKeyboardControl_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		923BE0608686E5786280760D49932E38 /* Pods-TKKeyboardControl_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B563442A18457EB7E51192BAC2182179 /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Tests" */;
-			buildPhases = (
-				0D7DE8A0E4AE38D47E5B677599CBEA06 /* Sources */,
-				705AFFA16CD80FFECF0FDAE84094AF4A /* Frameworks */,
-				A74CBBF01BBEE0462CFDE2B85242F21A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				28F800C64CB99CBE69FE850E1B6FB57F /* PBXTargetDependency */,
+				E375A1F2DFA78C0B60ED9F26BA71707F /* PBXTargetDependency */,
 			);
 			name = "Pods-TKKeyboardControl_Tests";
 			productName = "Pods-TKKeyboardControl_Tests";
@@ -322,19 +324,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					1C82CE6A539CEF57567532C47FD732D6 = {
-						LastSwiftMigration = 0800;
-					};
-					5B6A099A0978A771244FEE85B65E578E = {
-						LastSwiftMigration = 0800;
-					};
-					923BE0608686E5786280760D49932E38 = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -348,62 +339,96 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B6A099A0978A771244FEE85B65E578E /* Pods-TKKeyboardControl_Example */,
-				923BE0608686E5786280760D49932E38 /* Pods-TKKeyboardControl_Tests */,
-				1C82CE6A539CEF57567532C47FD732D6 /* TKKeyboardControl */,
+				614F4BDF0953B8044B73FC41BAA13F33 /* Pods-TKKeyboardControl_Example */,
+				B70641054549E0817E018B86EBBB586F /* Pods-TKKeyboardControl_Tests */,
+				73624702704ECBC5D1FBE4D82302A2B5 /* TKKeyboardControl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0D7DE8A0E4AE38D47E5B677599CBEA06 /* Sources */ = {
+		3B66802A4302F6761C92EC0D0263C037 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C48A03ABCEFD09F6997C3E568420E6 /* Pods-TKKeyboardControl_Tests-dummy.m in Sources */,
+				7B7727E8B13F131B3A386D2D71565886 /* Pods-TKKeyboardControl_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14B523D6B0E287BAE2350DC79631D0E8 /* Sources */ = {
+		7F744A0D35C8AA6F8A669AA17471568C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41942B9357EF82F998BBDA380FE0BA0 /* Pods-TKKeyboardControl_Example-dummy.m in Sources */,
+				9E21DB223C5F0386E105F44A9AFE8681 /* TKKeyboardControl-dummy.m in Sources */,
+				4FB23C0A22CCB25A5DF4B0171F1EE5E2 /* TKKeyboardControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4023DA13E9286B4A0B906163653D5916 /* Sources */ = {
+		EE828F4049AB015E3E9FAF50D965387B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44749D9D0E3D468E5AA13433FE42C911 /* TKKeyboardControl-dummy.m in Sources */,
-				BA888E6FFEDD03A3CBACE6663761243B /* TKKeyboardControl.swift in Sources */,
+				FDE0C40078249DE73B477B28F087A2F0 /* Pods-TKKeyboardControl_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28F800C64CB99CBE69FE850E1B6FB57F /* PBXTargetDependency */ = {
+		57FBC633FD2816B7E97769A02588DD83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TKKeyboardControl;
-			target = 1C82CE6A539CEF57567532C47FD732D6 /* TKKeyboardControl */;
-			targetProxy = 59424371BDD49D22431D32B9971E8F7B /* PBXContainerItemProxy */;
+			target = 73624702704ECBC5D1FBE4D82302A2B5 /* TKKeyboardControl */;
+			targetProxy = C87349A26069C1024A4E390D2221BB4F /* PBXContainerItemProxy */;
 		};
-		483B70B6085EB46347DCEC070C3664A1 /* PBXTargetDependency */ = {
+		E375A1F2DFA78C0B60ED9F26BA71707F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TKKeyboardControl;
-			target = 1C82CE6A539CEF57567532C47FD732D6 /* TKKeyboardControl */;
-			targetProxy = B462561EE3759536DD0379A5C8B1F504 /* PBXContainerItemProxy */;
+			target = 73624702704ECBC5D1FBE4D82302A2B5 /* TKKeyboardControl */;
+			targetProxy = 85C1D4E1D953D1C6F2F9EF418512BF8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1AF32EC8B6643FAE63799A104BE1C661 /* Debug */ = {
+		07CD056A05422CEC2312EC858246E007 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1DCCFF5387B412C14B658D235D6636C /* Pods-TKKeyboardControl_Example.debug.xcconfig */;
+			baseConfigurationReference = A08718C938D14F8CBA9821003A7A3810 /* TKKeyboardControl.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TKKeyboardControl/TKKeyboardControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TKKeyboardControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TKKeyboardControl/TKKeyboardControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TKKeyboardControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		10B8031797951D0383AD17B0A6D744AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B8C299C4371B0F84F3C4947BD002C78 /* Pods-TKKeyboardControl_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -412,18 +437,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TKKeyboardControl_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TKKeyboardControl_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TKKeyboardControl_Example;
+				PRODUCT_NAME = Pods_TKKeyboardControl_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -434,47 +459,44 @@
 			};
 			name = Debug;
 		};
-		811519CB8F683AC06F9C98B55AC40F11 /* Release */ = {
+		32CBD9796A74A32BC3AE27E38880F197 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A08718C938D14F8CBA9821003A7A3810 /* TKKeyboardControl.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TKKeyboardControl/TKKeyboardControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TKKeyboardControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TKKeyboardControl/TKKeyboardControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TKKeyboardControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		882EB4391EC2E701934974DA86F7343F /* Debug */ = {
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -488,6 +510,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -505,18 +528,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		9A919B71EBC0B5303AEC7E586FF1B68B /* Release */ = {
+		653DE6E45983CAF83CB4B9C30EDACD54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C84968BFBE2ED5C7CD6A70AA37967B9B /* Pods-TKKeyboardControl_Example.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -527,7 +553,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-TKKeyboardControl_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example.modulemap";
@@ -546,11 +572,13 @@
 			};
 			name = Release;
 		};
-		BB7B7469A4A27ACAA6E9738D15BFE7FD /* Debug */ = {
+		7A203A6F86DA14F83F2B296170A9634B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B8C299C4371B0F84F3C4947BD002C78 /* Pods-TKKeyboardControl_Tests.debug.xcconfig */;
+			baseConfigurationReference = F1DCCFF5387B412C14B658D235D6636C /* Pods-TKKeyboardControl_Example.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -559,18 +587,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TKKeyboardControl_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TKKeyboardControl_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TKKeyboardControl_Tests;
+				PRODUCT_NAME = Pods_TKKeyboardControl_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -581,11 +609,13 @@
 			};
 			name = Debug;
 		};
-		D060A3C2DDC55919338E341F923BA015 /* Release */ = {
+		851936A306AA195176B336BBBB871A10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61721D2608AF011EA820D79F0E4E4494 /* Pods-TKKeyboardControl_Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -596,7 +626,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-TKKeyboardControl_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests.modulemap";
@@ -615,64 +645,43 @@
 			};
 			name = Release;
 		};
-		DF22DCC899EDB6814149F6C8B4D51A26 /* Debug */ = {
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A08718C938D14F8CBA9821003A7A3810 /* TKKeyboardControl.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TKKeyboardControl/TKKeyboardControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TKKeyboardControl/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TKKeyboardControl/TKKeyboardControl.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TKKeyboardControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E2A10B0F68DC1E8522D8F193277522A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A08718C938D14F8CBA9821003A7A3810 /* TKKeyboardControl.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TKKeyboardControl/TKKeyboardControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TKKeyboardControl/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TKKeyboardControl/TKKeyboardControl.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TKKeyboardControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -682,35 +691,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				882EB4391EC2E701934974DA86F7343F /* Debug */,
-				811519CB8F683AC06F9C98B55AC40F11 /* Release */,
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C8D460E361C2B97E2522367068E069E /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Example" */ = {
+		7CEADB31B77FA9008C22E807B76D1656 /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1AF32EC8B6643FAE63799A104BE1C661 /* Debug */,
-				9A919B71EBC0B5303AEC7E586FF1B68B /* Release */,
+				7A203A6F86DA14F83F2B296170A9634B /* Debug */,
+				653DE6E45983CAF83CB4B9C30EDACD54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B563442A18457EB7E51192BAC2182179 /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Tests" */ = {
+		A21B59C1987F825963572C333834A6FF /* Build configuration list for PBXNativeTarget "Pods-TKKeyboardControl_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB7B7469A4A27ACAA6E9738D15BFE7FD /* Debug */,
-				D060A3C2DDC55919338E341F923BA015 /* Release */,
+				10B8031797951D0383AD17B0A6D744AF /* Debug */,
+				851936A306AA195176B336BBBB871A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEB365EC7E672AD9A32401D3C7F8A007 /* Build configuration list for PBXNativeTarget "TKKeyboardControl" */ = {
+		D146610ADAC12EAF7C48AE7B95B524C7 /* Build configuration list for PBXNativeTarget "TKKeyboardControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF22DCC899EDB6814149F6C8B4D51A26 /* Debug */,
-				E2A10B0F68DC1E8522D8F193277522A3 /* Release */,
+				32CBD9796A74A32BC3AE27E38880F197 /* Debug */,
+				07CD056A05422CEC2312EC858246E007 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

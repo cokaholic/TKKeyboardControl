@@ -1,5 +1,5 @@
 PODS:
-  - TKKeyboardControl (1.0.0)
+  - TKKeyboardControl (1.0.7)
 
 DEPENDENCIES:
   - TKKeyboardControl (from `..`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ..
 
 SPEC CHECKSUMS:
-  TKKeyboardControl: 2d8d30e72187e7afff15b4e5f2668b4093f78be1
+  TKKeyboardControl: 3eccce6c58d1ff9d3332e1193112d4744a8c8afa
 
-PODFILE CHECKSUM: b5e562eab5801aeb1ba2caa937609efee571e2b9
+PODFILE CHECKSUM: 43e8f03d545f543a3df40e24dcc35d7335d4b24e
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.1.0.rc.2

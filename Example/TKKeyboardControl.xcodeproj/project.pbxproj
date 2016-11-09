@@ -166,12 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TKKeyboardControl_Example" */;
 			buildPhases = (
-				AD5E23AE3AB29ED2203E45B4 /* 📦 Check Pods Manifest.lock */,
+				AD5E23AE3AB29ED2203E45B4 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				16794E3BBE751EA510B314AE /* 📦 Embed Pods Frameworks */,
-				093F35C371C88E2E09EF5828 /* 📦 Copy Pods Resources */,
+				16794E3BBE751EA510B314AE /* [CP] Embed Pods Frameworks */,
+				093F35C371C88E2E09EF5828 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,12 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TKKeyboardControl_Tests" */;
 			buildPhases = (
-				919FB8348E945BDD5CBD768B /* 📦 Check Pods Manifest.lock */,
+				919FB8348E945BDD5CBD768B /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				C43E6BC1C461FC53EEDD286A /* 📦 Embed Pods Frameworks */,
-				11287250D9B6EBA18E731EF2 /* 📦 Copy Pods Resources */,
+				C43E6BC1C461FC53EEDD286A /* [CP] Embed Pods Frameworks */,
+				11287250D9B6EBA18E731EF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,14 +263,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		093F35C371C88E2E09EF5828 /* 📦 Copy Pods Resources */ = {
+		093F35C371C88E2E09EF5828 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,14 +278,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		11287250D9B6EBA18E731EF2 /* 📦 Copy Pods Resources */ = {
+		11287250D9B6EBA18E731EF2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +293,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKKeyboardControl_Tests/Pods-TKKeyboardControl_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		16794E3BBE751EA510B314AE /* 📦 Embed Pods Frameworks */ = {
+		16794E3BBE751EA510B314AE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,44 +308,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKKeyboardControl_Example/Pods-TKKeyboardControl_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		919FB8348E945BDD5CBD768B /* 📦 Check Pods Manifest.lock */ = {
+		919FB8348E945BDD5CBD768B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AD5E23AE3AB29ED2203E45B4 /* 📦 Check Pods Manifest.lock */ = {
+		AD5E23AE3AB29ED2203E45B4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C43E6BC1C461FC53EEDD286A /* 📦 Embed Pods Frameworks */ = {
+		C43E6BC1C461FC53EEDD286A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
