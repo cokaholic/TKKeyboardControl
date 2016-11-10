@@ -18,10 +18,20 @@ TKKeyboardControl is available through [CocoaPods](http://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
-pod 'TKKeyboardControl'
+target '<Your Target Name>' do
+  pod 'TKKeyboardControl'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |configuration|
+      configuration.build_settings['SWIFT_VERSION'] = "3.0"
+    end
+  end
+end
 ```
 
 #### Manually
@@ -95,7 +105,7 @@ self.view.removeKeyboardControl()
 ## Requirements
 
 - Xcode 8.0 or greater
-- iOS8.0 or greater
+- iOS9.0 or greater
 - Swift3.0 or greater
 
 ## Author
