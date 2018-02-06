@@ -26,7 +26,7 @@ TKKeyboardControl is available through [CocoaPods](http://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'TKKeyboardControl'
+pod 'TKKeyboardControl', :git => 'https://github.com/cokaholic/TKKeyboardControl.git', :tag => '2.0.0'
 ```
 
 #### Manually
