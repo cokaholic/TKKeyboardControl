@@ -40,9 +40,9 @@
 /* Begin PBXFileReference section */
 		195A11097DDF4A8C0A2D06A599370355 /* Pods-TKKeyboardControl_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Tests-resources.sh"; sourceTree = "<group>"; };
 		2149C7764812FA0828773C60B265FD23 /* Pods-TKKeyboardControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TKKeyboardControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2BE8AFBE6B1C6A8F9B1D15C3459491A5 /* Pods-TKKeyboardControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TKKeyboardControl_Example.modulemap"; sourceTree = "<group>"; };
+		2BE8AFBE6B1C6A8F9B1D15C3459491A5 /* Pods-TKKeyboardControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TKKeyboardControl_Example.modulemap"; sourceTree = "<group>"; };
 		2C14B907928832A38831BFD77B6D312D /* Pods-TKKeyboardControl_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Example-resources.sh"; sourceTree = "<group>"; };
-		317A817E9D73AE307998C4A202DBEB0E /* TKKeyboardControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TKKeyboardControl.modulemap; sourceTree = "<group>"; };
+		317A817E9D73AE307998C4A202DBEB0E /* TKKeyboardControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TKKeyboardControl.modulemap; sourceTree = "<group>"; };
 		31CA6A7448BCC120E2F1EB575EF74DFC /* Pods-TKKeyboardControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Example-frameworks.sh"; sourceTree = "<group>"; };
 		365AE13B2D0D17B6963E55B55236C244 /* Pods-TKKeyboardControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TKKeyboardControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E38E9C20024C986DBFFE7903707A77F /* Pods-TKKeyboardControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TKKeyboardControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		65BBBC3CA2D0AC4BF899C5E42D405464 /* Pods-TKKeyboardControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TKKeyboardControl_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		86956CA85AA22409545984F1427F5C08 /* Pods-TKKeyboardControl_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TKKeyboardControl_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9ED61D6EA591EE413867A77427BF0590 /* TKKeyboardControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TKKeyboardControl-dummy.m"; sourceTree = "<group>"; };
 		A08718C938D14F8CBA9821003A7A3810 /* TKKeyboardControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TKKeyboardControl.xcconfig; sourceTree = "<group>"; };
 		A78834C7B39B7A3D19901C3A67560DA1 /* Pods-TKKeyboardControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TKKeyboardControl_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -63,14 +63,14 @@
 		B2A9B1E4AF8DA53EC3754E0E50AE1B19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C84968BFBE2ED5C7CD6A70AA37967B9B /* Pods-TKKeyboardControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TKKeyboardControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CAF68A74E9AEFA34A12AB86430C12BBC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D82BF6F451F9626F493DF0C112B9C206 /* Pods_TKKeyboardControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TKKeyboardControl_Tests.framework; path = "Pods-TKKeyboardControl_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82BF6F451F9626F493DF0C112B9C206 /* Pods_TKKeyboardControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKKeyboardControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E347CE7F406EB97F10F466D71A93AB35 /* TKKeyboardControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TKKeyboardControl-prefix.pch"; sourceTree = "<group>"; };
 		EFA7D4D82B9F0EC325EBE335A0E60780 /* TKKeyboardControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKKeyboardControl.swift; sourceTree = "<group>"; };
 		F09A66671C9DBC9BA0F2F007386A99B9 /* Pods-TKKeyboardControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TKKeyboardControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F1DCCFF5387B412C14B658D235D6636C /* Pods-TKKeyboardControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TKKeyboardControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F7B34F968060DB9A858384D6D6C49A7A /* Pods-TKKeyboardControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TKKeyboardControl_Tests.modulemap"; sourceTree = "<group>"; };
-		F9D8C2FF6413600AFFA6B9EED2F29A79 /* TKKeyboardControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TKKeyboardControl.framework; path = TKKeyboardControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE247675F668EC3F9EFA23A9B4C29F6E /* Pods_TKKeyboardControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TKKeyboardControl_Example.framework; path = "Pods-TKKeyboardControl_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B34F968060DB9A858384D6D6C49A7A /* Pods-TKKeyboardControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TKKeyboardControl_Tests.modulemap"; sourceTree = "<group>"; };
+		F9D8C2FF6413600AFFA6B9EED2F29A79 /* TKKeyboardControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TKKeyboardControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE247675F668EC3F9EFA23A9B4C29F6E /* Pods_TKKeyboardControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKKeyboardControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,6 @@
 			children = (
 				EFA7D4D82B9F0EC325EBE335A0E60780 /* TKKeyboardControl.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -184,7 +183,6 @@
 			children = (
 				844410D69F8E7549DC119710E913E83B /* Classes */,
 			);
-			name = TKKeyboardControl;
 			path = TKKeyboardControl;
 			sourceTree = "<group>";
 		};
@@ -325,7 +323,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					73624702704ECBC5D1FBE4D82302A2B5 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -399,20 +402,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -438,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C84968BFBE2ED5C7CD6A70AA37967B9B /* Pods-TKKeyboardControl_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -479,19 +493,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -505,6 +529,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -514,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61721D2608AF011EA820D79F0E4E4494 /* Pods-TKKeyboardControl_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -550,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1DCCFF5387B412C14B658D235D6636C /* Pods-TKKeyboardControl_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -609,7 +636,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -641,7 +669,8 @@
 				PRODUCT_NAME = TKKeyboardControl;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -652,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B8C299C4371B0F84F3C4947BD002C78 /* Pods-TKKeyboardControl_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";

@@ -1,14 +1,22 @@
 # TKKeyboardControl
 
-TKKeyboardControl adds keyboard awareness and scrolling dismissal (like iMessages app) to any view with only 1 line of code **for Swift3.0**.  
+TKKeyboardControl adds keyboard awareness and scrolling dismissal (like iMessages app) to any view with only 1 line of code **for Swift4.0** and it supports **SafeArea**.
 This library is inspired by [DAKeyboardControl](https://github.com/danielamitay/DAKeyboardControl).
 
-[![CI Status](http://img.shields.io/travis/cztatsumi-keisuke/TKKeyboardControl.svg?style=flat)](https://travis-ci.org/cztatsumi-keisuke/TKKeyboardControl)
+![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat-square
+)
+[![Cocoapods](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg?style=flat-square)
 [![Version](https://img.shields.io/cocoapods/v/TKKeyboardControl.svg?style=flat)](http://cocoapods.org/pods/TKKeyboardControl)
-[![License](https://img.shields.io/cocoapods/l/TKKeyboardControl.svg?style=flat)](http://cocoapods.org/pods/TKKeyboardControl)
-[![Platform](https://img.shields.io/cocoapods/p/TKKeyboardControl.svg?style=flat)](http://cocoapods.org/pods/TKKeyboardControl)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square
+)](http://mit-license.org)
+![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat-square)
 
-![keyboard_test](./Images/keyboard_test.gif "keyboard_test")  
+![keyboard_test](./Images/keyboard_test.gif "keyboard_test")
+
+## Features
+- [x] Keyboard closing without UIScrollView
+- [x] Support `Swift4`
+- [x] Support `Safe Area`
 
 ## Installation
 
@@ -18,20 +26,7 @@ TKKeyboardControl is available through [CocoaPods](http://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-platform :ios, '8.0'
-use_frameworks!
-
-target '<Your Target Name>' do
-  pod 'TKKeyboardControl'
-end
-
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |configuration|
-      configuration.build_settings['SWIFT_VERSION'] = "3.0"
-    end
-  end
-end
+pod 'TKKeyboardControl'
 ```
 
 #### Manually
@@ -44,28 +39,50 @@ Example project included (./Example)
 
 ### Adding pan-to-dismiss (functionality introduced in iMessages)
 
+#### Frame based action handler
+
 ```swift
-self.view.addKeyboardPanningWithFrameBasedActionHandler({ (keyboardFrameInView, opening, closing) in
-            
-            // Move interface objects accordingly
-            // Animation block is handled for you
-            
-            }, constraintBasedActionHandler: nil)
-            // Make sure to call self.view.removeKeyboardControl before the view is released.
-            // (It's the balancing call)
+view.addKeyboardPanning(frameBasedActionHandler: { keyboardFrameInView, opening, closing in
+    // Move interface objects accordingly
+    // Animation block is handled for you
+})
+// Make sure to call self.view.removeKeyboardControl before the view is released.
+// (It's the balancing call)
+```
+
+#### Constraint based action handler
+
+```swift
+view.addKeyboardPanning(constraintBasedActionHandler: { keyboardFrameInView, opening, closing in
+    // Move interface objects accordingly
+    // Animation block is handled for you
+})
+// Make sure to call self.view.removeKeyboardControl before the view is released.
+// (It's the balancing call)
 ```
 
 ### Adding keyboard awareness (appearance and disappearance only)
 
+#### Frame based action handler
+
 ```swift
-self.view.addKeyboardNonpanningWithFrameBasedActionHandler({ (keyboardFrameInView, opening, closing) in
-            
-            // Move interface objects accordingly
-            // Animation block is handled for you
-            
-            }, constraintBasedActionHandler: nil)
-            // Make sure to call self.view.removeKeyboardControl before the view is released.
-            // (It's the balancing call)
+view.addKeyboardNonpanning(frameBasedActionHandler: { keyboardFrameInView, opening, closing in
+    // Move interface objects accordingly
+    // Animation block is handled for you
+})
+// Make sure to call self.view.removeKeyboardControl before the view is released.
+// (It's the balancing call)
+```
+
+#### Constraint based action handler
+
+```swift
+view.addKeyboardNonpanning(constraintBasedActionHandler: { keyboardFrameInView, opening, closing in
+    // Move interface objects accordingly
+    // Animation block is handled for you
+})
+// Make sure to call self.view.removeKeyboardControl before the view is released.
+// (It's the balancing call)
 ```
 
 ### Supporting an above-keyboard input view
@@ -73,28 +90,26 @@ self.view.addKeyboardNonpanningWithFrameBasedActionHandler({ (keyboardFrameInVie
 The `keyboardTriggerOffset` property allows you to choose at what point the user's finger "engages" the keyboard.
 
 ```swift
-self.view.keyboardTriggerOffset = 44.0;	// Input view frame height
+view.keyboardTriggerOffset = 44.0;	// Input view frame height
 
-self.view.addKeyboardPanningWithFrameBasedActionHandler({ (keyboardFrameInView, opening, closing) in
-            
-            // Move interface objects accordingly
-            // Animation block is handled for you
-            
-            }, constraintBasedActionHandler: nil)
-            // Make sure to call self.view.removeKeyboardControl before the view is released.
-            // (It's the balancing call)
+view.addKeyboardNonpanning(frameBasedActionHandler: { keyboardFrameInView, opening, closing in
+    // Move interface objects accordingly
+    // Animation block is handled for you
+})
+// Make sure to call self.view.removeKeyboardControl before the view is released.
+// (It's the balancing call)
 ```
 
 ### Dismissing the keyboard (convenience method)
 
 ```swift
-self.view.hideKeyboard()
+view.hideKeyboard()
 ```
 
 ### Remove the NSNotification observer at the end of a VC's life (convenience method)
 
 ```swift
-self.view.removeKeyboardControl()
+view.removeKeyboardControl()
 ```
 
 ## Notes
@@ -105,12 +120,12 @@ self.view.removeKeyboardControl()
 ## Requirements
 
 - Xcode 8.0 or greater
-- iOS8.0 or greater
-- Swift3.0 or greater
+- iOS9.0 or greater
+- Swift4.0 or greater
 
 ## Author
 
-cokaholic, nietzsche.god.is.dead@gmail.com
+Keisuke Tatsumi, nietzsche.god.is.dead@gmail.com
 
 ## License
 
@@ -118,7 +133,7 @@ TKKeyboardControl is available under the MIT license.
 
 ### MIT License
 
-Copyright (c) 2016 Keisuke Tatsumi
+Copyright (c) 2018 Keisuke Tatsumi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
