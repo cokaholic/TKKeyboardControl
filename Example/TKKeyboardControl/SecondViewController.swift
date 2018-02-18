@@ -48,8 +48,12 @@ class SecondViewController: UIViewController {
         view.keyboardTriggerOffset = inputBaseViewHeight
         
         // Add Keyboard Pannning
-        view.addKeyboardPanning(frameBasedActionHandler: { [weak self] keyboardFrameInView, opening, closing in
+        view.addKeyboardPanning(frameBasedActionHandler: { [weak self] keyboardFrameInView, firstResponder, opening, closing in
             guard let weakSelf = self else { return }
+            if let v = firstResponder as? UIView {
+                print("isDescendant of inputBaseView?: \(v.isDescendant(of: weakSelf.inputBaseView))")
+            }
+
             weakSelf.inputBaseView.frame.origin.y = keyboardFrameInView.origin.y - weakSelf.inputBaseViewHeight
         })
         
