@@ -42,7 +42,7 @@ Example project included (./Example)
 #### Frame based action handler
 
 ```swift
-view.addKeyboardPanning(frameBasedActionHandler: { keyboardFrameInView, opening, closing in
+view.addKeyboardPanning(frameBasedActionHandler: { keyboardFrameInView, firstResponder, opening, closing in
     // Move interface objects accordingly
     // Animation block is handled for you
 })
@@ -53,7 +53,7 @@ view.addKeyboardPanning(frameBasedActionHandler: { keyboardFrameInView, opening,
 #### Constraint based action handler
 
 ```swift
-view.addKeyboardPanning(constraintBasedActionHandler: { keyboardFrameInView, opening, closing in
+view.addKeyboardPanning(constraintBasedActionHandler: { keyboardFrameInView, firstResponder, opening, closing in
     // Move interface objects accordingly
     // Animation block is handled for you
 })
@@ -66,7 +66,7 @@ view.addKeyboardPanning(constraintBasedActionHandler: { keyboardFrameInView, ope
 #### Frame based action handler
 
 ```swift
-view.addKeyboardNonpanning(frameBasedActionHandler: { keyboardFrameInView, opening, closing in
+view.addKeyboardNonpanning(frameBasedActionHandler: { keyboardFrameInView, firstResponder, opening, closing in
     // Move interface objects accordingly
     // Animation block is handled for you
 })
@@ -77,7 +77,7 @@ view.addKeyboardNonpanning(frameBasedActionHandler: { keyboardFrameInView, openi
 #### Constraint based action handler
 
 ```swift
-view.addKeyboardNonpanning(constraintBasedActionHandler: { keyboardFrameInView, opening, closing in
+view.addKeyboardNonpanning(constraintBasedActionHandler: { keyboardFrameInView, firstResponder, opening, closing in
     // Move interface objects accordingly
     // Animation block is handled for you
 })
@@ -92,7 +92,7 @@ The `keyboardTriggerOffset` property allows you to choose at what point the user
 ```swift
 view.keyboardTriggerOffset = 44.0;	// Input view frame height
 
-view.addKeyboardNonpanning(frameBasedActionHandler: { keyboardFrameInView, opening, closing in
+view.addKeyboardNonpanning(frameBasedActionHandler: { keyboardFrameInView, firstResponder, opening, closing in
     // Move interface objects accordingly
     // Animation block is handled for you
 })
