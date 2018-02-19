@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-public typealias TKKeyboardDidMoveBlock = ((_ keyboardFrameInView: CGRect, _ opening: Bool, _ closing: Bool) -> Void)?
+public typealias TKKeyboardDidMoveBlock = ((_ keyboardFrameInView: CGRect, _ firstResponder: UIResponder?, _ opening: Bool, _ closing: Bool) -> Void)?
 
 private let frameKeyPath = "frame"
 
@@ -442,7 +442,7 @@ extension UIView: UIGestureRecognizerDelegate {
         let constraintBasedKeyboardDidMoveBlockCalled = (constraintBasedKeyboardDidMoveBlock != nil && !keyboardEndFrameView.isNull)
         
         if constraintBasedKeyboardDidMoveBlockCalled {
-            constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, true, false)
+            constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, keyboardActiveInput, true, false)
         }
         
         UIView.animate(withDuration: keyboardTransitionDuration,
@@ -454,7 +454,7 @@ extension UIView: UIGestureRecognizerDelegate {
                             self.layoutIfNeeded()
                         }
                         if self.frameBasedKeyboardDidMoveBlock != nil && !keyboardEndFrameView.isNull {
-                            self.frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, true, false)
+                            self.frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, self.keyboardActiveInput, true, false)
                         }
         }) { _ in
             if self.panning {
@@ -508,7 +508,7 @@ extension UIView: UIGestureRecognizerDelegate {
         let constraintBasedKeyboardDidMoveBlockCalled = (constraintBasedKeyboardDidMoveBlock != nil && !keyboardEndFrameView.isNull)
         
         if constraintBasedKeyboardDidMoveBlockCalled {
-            constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, false, false)
+            constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, keyboardActiveInput, false, false)
         }
         
         UIView.animate(withDuration: keyboardTransitionDuration,
@@ -520,7 +520,7 @@ extension UIView: UIGestureRecognizerDelegate {
                             self.layoutIfNeeded()
                         }
                         if self.frameBasedKeyboardDidMoveBlock != nil && !keyboardEndFrameView.isNull {
-                            self.frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, false, false)
+                            self.frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, self.keyboardActiveInput, false, false)
                         }
             }, completion:nil)
     }
@@ -549,7 +549,7 @@ extension UIView: UIGestureRecognizerDelegate {
         let constraintBasedKeyboardDidMoveBlockCalled = (constraintBasedKeyboardDidMoveBlock != nil && !keyboardEndFrameView.isNull)
         
         if constraintBasedKeyboardDidMoveBlockCalled {
-            constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, false, true)
+            constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, keyboardActiveInput, false, true)
         }
         
         UIView.animate(withDuration: keyboardTransitionDuration,
@@ -561,7 +561,7 @@ extension UIView: UIGestureRecognizerDelegate {
                             self.layoutIfNeeded()
                         }
                         if self.frameBasedKeyboardDidMoveBlock != nil && !keyboardEndFrameView.isNull {
-                            self.frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, false, true)
+                            self.frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, self.keyboardActiveInput, false, true)
                         }
         }) { _ in
             if let panRecognizer = self.keyboardPanRecognizer {
@@ -615,11 +615,11 @@ extension UIView: UIGestureRecognizerDelegate {
             if !activityView.isHidden && !keyboardEndFrameView.isNull {
                 
                 if frameBasedKeyboardDidMoveBlock != nil {
-                    frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, false, false)
+                    frameBasedKeyboardDidMoveBlock?(keyboardEndFrameView, keyboardActiveView, false, false)
                 }
                 
                 if constraintBasedKeyboardDidMoveBlock != nil {
-                    constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, false, false)
+                    constraintBasedKeyboardDidMoveBlock?(keyboardEndFrameWindow, keyboardActiveInput, false, false)
                     layoutIfNeeded()
                 }
             }
